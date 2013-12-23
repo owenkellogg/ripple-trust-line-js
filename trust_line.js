@@ -74,6 +74,7 @@ TrustLine.prototype.submit = function(callbacks) {
 		.on('success', callbacks.success)
 		.on('error', callbacks.error)
 		.submit();
+		remote.set_secret(null, null);
   }
   if (remote._connected) {
     submitTrust();
